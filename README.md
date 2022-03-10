@@ -16,11 +16,11 @@ The problem faced is how to deliver that content to our users in an intuitive an
 The data to be displayed is stored on the content server that is running on localhost:9000, and the key endpoints are:
 
 * `sections.json`
-  * returns the nested list of categories the Q&A content is sorted into. The root of this tree has an id of -1.
+    * returns the nested list of categories the Q&A content is sorted into. The root of this tree has an id of -1.
 * `company-dealings/qa.json`
-  * returns the Q&A for all categories within company dealings
+    * returns the Q&A for all categories within company dealings
 * `directors-officers-management/qa.json`
-  * returns the Q&A for all categories within Directors and Officers: Management
+    * returns the Q&A for all categories within Directors and Officers: Management
 
 The responses for these endpoints can all be found in the data folder so you can see what will be returned.
 
@@ -31,7 +31,7 @@ The responses for these endpoints can all be found in the data folder so you can
 * The starting state should have all questions collapsed.
 * Clicking on an element of the tree should toggle its state (so if it is collapsed, clicking on it should expand that section, if it is already expanded collapse that section).
 * Some of the Q&A have links to other Q&A on the same page, clicking these links should take the user to that part of the page. E.g. qa_id: 99 links to 1433932435017_Toc402171636 which is assosciated with qa_id: 105
-  * Some links will be dead links, don't worry too much about how these behave. The expected behaviour is nothing will happen.
+    * Some links will be dead links, don't worry too much about how these behave. The expected behaviour is nothing will happen.
 
 
 Some things to note:
