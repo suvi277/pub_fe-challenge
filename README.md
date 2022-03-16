@@ -41,8 +41,3 @@ Some things to note:
 * Simplicity is key.
 * The styling should be functional and readable.
 * You can use this file to list any improvements you didn't have time to implement.
-
-
-Suggested extension:
-
-* Support passing in a toc id by url (e.g. ?q=1433932435017_Toc402171628) and automatically scrolling the user to the right part of the tree with the content expanded.
