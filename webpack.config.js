@@ -1,14 +1,22 @@
-const path = require("path");
-const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+  devtool: "eval-source-map",
+  mode: "development",
   entry: "./src/index",
   plugins: [
     new HtmlWebpackPlugin({
       template: "./index.html",
     }),
   ],
+  devServer: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:9000',
+        pathRewrite: { '^/api': '' },
+      },
+    },
+  },
   module: {
     rules: [
       {
@@ -18,13 +26,23 @@ module.exports = {
           loader: "babel-loader",
           options: {
             presets: ["@babel/preset-env", "@babel/preset-react"],
-          },
-        },
+            plugins: ["@babel/plugin-transform-runtime"]
+          }
+        }
       },
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
-      },
-    ],
-  },
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              importLoaders: 1,
+              modules: true
+            }
+          }
+        ]
+      }
+    ]
+  }
 };

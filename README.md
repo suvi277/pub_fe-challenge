@@ -15,11 +15,11 @@ The problem faced is how to deliver that content to our users in an intuitive an
 
 The data to be displayed is stored on the content server that is running on localhost:9000, and the key endpoints are:
 
-* `sections.json`
+* `/api/sections.json`
     * returns the nested list of categories the Q&A content is sorted into. The root of this tree has an id of -1.
-* `company-dealings/qa.json`
+* `/api/company-dealings/qa.json`
     * returns the Q&A for all categories within company dealings
-* `directors-officers-management/qa.json`
+* `/api/directors-officers-management/qa.json`
     * returns the Q&A for all categories within Directors and Officers: Management
 
 The responses for these endpoints can all be found in the data folder so you can see what will be returned.
@@ -37,9 +37,9 @@ The responses for these endpoints can all be found in the data folder so you can
 Some things to note:
 
 * Your solution should work in any modern browser, but you don't need to worry about making it fully cross browser or supporting older browsers.
-* The root of the sections tree has id -1.
+* The root of the sections parentId is 'null'.
 * Simplicity is key.
-* The styling should be functional and readable, but don't worry about making it pretty.
+* The styling should be functional and readable.
 * You can use this file to list any improvements you didn't have time to implement.
 
 
