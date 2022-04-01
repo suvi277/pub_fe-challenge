@@ -2,22 +2,26 @@
   "name": "esv-frontend-coding-test",
   "version": "1.0.0",
   "scripts": {
-    "start": "webpack serve --mode=development"
+    "start": "concurrently -k \"webpack serve\" \"http-server ./data -p 9000\""
   },
   "author": "ESV",
   "devDependencies": {
     "@babel/core": "^7.1.2",
+    "@babel/plugin-transform-runtime": "^7.17.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
+    "concurrently": "^7.0.0",
     "css-loader": "^6.6.0",
     "html-webpack-plugin": "^5.5.0",
+    "http-server": "^14.1.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.2.1",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
+    "@babel/runtime": "^7.17.7",
     "react": "^16.6.0",
     "react-dom": "^16.6.0"
   }
