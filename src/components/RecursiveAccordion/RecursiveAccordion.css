@@ -1,0 +1,20 @@
+.accordion-header {
+    border-bottom: 1px solid #7DE1FE;
+    cursor: pointer;
+    display: flex;
+    font-weight: normal;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.accordion-header::after {
+    content: "\f067";
+    color: #7DE1FE;
+    font-family: FontAwesome;
+    margin-left: auto;
+}
+
+.accordion-header.expanded::after {
+    content: "\f068";
+}
