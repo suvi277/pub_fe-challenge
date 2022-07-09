@@ -41,3 +41,6 @@ Some things to note:
 * Simplicity is key.
 * The styling should be functional and readable.
 * You can use this file to list any improvements you didn't have time to implement.
+
+** Not implemented **
+I have spent 2-3 hours for this task and focussed on the funtionality and hence dint get time to implement the test cases for the code. The UI is responsive and played with the json to make it like a tree structure.
